@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --orange: #f9ba60;
+  --pink: #e9768f;
+  --black: #1d1c1c;
+  --white: #fff;
+  --old-green: #37954b;
+  --light-color: #666;
+  --bckrnd-light: #fcf6f2;
+  --light-green: #71ef94;
+  --light-blue: #f0fbfa;
+  --light-red: #d24e4e;
+  --box-quantity: #c4e6df;
+
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  /* text-transform: capitalize; */
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* section { */
+/* padding: 3rem 7%; */
+/* } */
+
+.heading {
+  font-size: 4rem;
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 6rem;
+}
+
+.heading span {
+  color: var(--old-green);
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border-radius: 10rem;
+  border: 0.2rem solid var(--old-green);
+  color: var(--old-green);
+  background: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--old-green);
+  color: var(--white);
+}
+
+/* header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: var(--bckrnd-light);
+  box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.header .logo i {
+  color: var(--orange);
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--old-green);
+}
+
+.header .navbar a:hover,
+.header .icons div:hover {
+  color: var(--black);
+}
+
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.7rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.header .login-form {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  width: 35rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.header .login-form.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
+.header .login-form h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.header .login-form .box {
+  width: 100%;
+  margin: 0.7rem 0;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.header .login-form p {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  color: var(--light-color);
+}
+
+.header .login-form p a {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+/* header ends */
+
+/* home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+  background: var(--bckrnd-light);
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+  padding-left: 10rem;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  color: var(--black);
+}
+
+.home .content h3 span {
+  color: var(--light-color);
+  font-size: 40px;
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.home .image {
+  flex: 1 1 5rem;
+  background-size: cover;
+}
+
+.home .image img {
+  width: 100%;
+  border-bottom-left-radius: 35rem;
+  margin-bottom: 20%;
+}
+
+.custom-shape-divider-bottom-1716857440 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1716857440 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1716857440 .shape-fill {
+  fill: var(--old-green);
+}
+/* end */
+
+/* profile */
+.about {
+  background: var(--bckrnd-light);
+}
+
+.about .profile {
+  background: var(--old-green);
+}
+
+.about .profile h1 {
+  font-size: 4rem;
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 6rem;
+}
+
+.about .row,
+.ppdb .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 3rem 7%;
+}
+
+.about .row .visi {
+  flex: 1 1 50rem;
+}
+
+.about .row .visi h3 {
+  margin-left: 17%;
+  font-size: 3.5rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.about .row .visi p {
+  margin-left: 17%;
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.about .row .visi img {
+  padding-left: 15%;
+}
+
+.about .row .misi {
+  flex: 1 1 40rem;
+}
+
+.about .row .misi h3 {
+  font-size: 3.5rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.about .row .misi ul li {
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem 0;
+  line-height: 2;
+  text-align: justify;
+}
+/* end */
+
+/* achievement */
+.education {
+  padding: 3rem 7%;
+  background: var(--bckrnd-light);
+}
+
+.education .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 7%;
+}
+
+.education .row .img-prestasi,
+.img-prestasi-internasional {
+  flex: 1 1 50rem;
+  margin-bottom: 6rem;
+}
+
+.education .row .img-prestasi h1,
+.img-prestasi-internasional h1 {
+  font-size: 4rem;
+  color: var(--old-green);
+  font-weight: bolder;
+}
+
+.education .row .prestasi,
+.prestasi-internasional {
+  margin-top: 5%;
+  flex: 1 1 40rem;
+  display: inline-block; /* Added this line */
+  background: var(--light-green);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1rem;
+  overflow: hidden;
+  padding: 2rem; /* Added some padding for better spacing */
+}
+
+.education .row .prestasi-internasional {
+  margin-bottom: 10%;
+}
+
+.education .row .prestasi h1,
+.prestasi-internasional h1 {
+  font-size: 2.5rem;
+  color: var(--black);
+  line-height: 1.8;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+
+.education .row .prestasi p,
+.prestasi-internasional p {
+  font-size: 1.5rem;
+  color: var(--black);
+  line-height: 1.8;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+
+.education .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.education .box-container .box:nth-child(odd) {
+  background: var(--pink);
+}
+
+.education .box-container .box:nth-child(2) {
+  background: var(--orange);
+}
+
+.education .box-container .box {
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1rem;
+  overflow: hidden;
+}
+
+.education .box-container .box:hover img {
+  transform: scale(1.1);
+}
+
+.education .box-container .box h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  line-height: 1.8;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+
+.education .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--white);
+  padding: 1rem 2rem;
+}
+
+.education .box-container .box .box img {
+  width: 100%;
+  height: 66%;
+}
+/* end */
+
+/* ppdb start */
+.ppdb {
+  background: var(--bckrnd-light);
+}
+
+.ppdb .header-ppdb {
+  background: var(--orange);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.ppdb .header-ppdb h1 {
+  font-size: 4rem;
+  color: var(--white);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.ppdb .row .image {
+  flex: 1 1 20rem;
+}
+
+.ppdb .row .image img {
+  margin-top: 6rem;
+  padding-left: 7%;
+}
+
+.ppdb .row .jadwal {
+  flex: 1 1 40rem;
+}
+
+.ppdb .row .jadwal h3 {
+  font-size: 4.5rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.ppdb .row .jadwal .table,
+.biaya .row .waktu-sekolah .table {
+  width: 100%;
+}
+
+.ppdb .row .jadwal .table .thead {
+  text-align: left;
+  font-size: 3.5rem;
+  color: var(--old-green);
+}
+
+.ppdb .row .jadwal .table .thead th {
+  padding: 8px;
+}
+
+.ppdb .row .jadwal .table tbody {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: bolder;
+}
+
+.ppdb .row .jadwal .table tbody td {
+  padding: 12px;
+}
+/* ppdb end */
+
+/* biaya */
+.biaya {
+  background: var(--bckrnd-light);
+}
+
+.biaya .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 3rem 10%;
+}
+
+.biaya .row .waktu-sekolah {
+  flex: 1 1 50rem;
+}
+
+/* .biaya .row .waktu-sekolah img { */
+/* width: 75%; */
+/* height: 75%; */
+/* } */
+
+.biaya .row .waktu-sekolah h3 {
+  font-size: 3.5rem;
+  color: var(--old-green);
+  line-height: 1.5;
+  padding-bottom: 2.5rem;
+}
+
+.biaya .row .waktu-sekolah .table .thead {
+  text-align: left;
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.biaya .row .waktu-sekolah .table .tbody {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.biaya .row .biaya-pendidikan {
+  flex: 1 1 50rem;
+}
+
+.biaya .row .biaya-pendidikan h3 {
+  font-size: 3.5rem;
+  color: var(--old-green);
+  line-height: 1.5;
+  padding-bottom: 2.5rem;
+  text-align: right;
+}
+
+.biaya .row .biaya-pendidikan h3.terms {
+  text-align: left;
+}
+
+.biaya .row .biaya-pendidikan p {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.biaya .row .biaya-pendidikan p span {
+  text-decoration: underline;
+}
+
+.biaya .row .biaya-pendidikan .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4rem;
+}
+
+.biaya .row .biaya-pendidikan .table th {
+  text-align: left;
+  font-size: 2.5rem;
+  color: var(--black);
+  background-color: var(--light-green);
+}
+
+.biaya .row .biaya-pendidikan .table .thead th {
+  padding: 1rem;
+}
+
+.biaya .row .biaya-pendidikan .table .tbody {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+  background-color: var(--light-blue);
+}
+
+.biaya .row .biaya-pendidikan .table .tbody .total {
+  background-color: var(--light-red);
+  color: var(--white);
+}
+
+.biaya .row .biaya-pendidikan .table .tbody td {
+  padding: 1rem;
+}
+/* biaya end */
+
+/* quantity start */
+.quantity {
+  padding: 3rem 20%;
+  background: var(--bckrnd-light);
+}
+
+.quantity .row {
+  margin-top: 5rem;
+}
+
+.quantity .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.quantity .box-container .box {
+  background: var(--box-quantity);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.quantity .box-container .box h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-align: center;
+  line-height: 1.8;
+  padding-top: 3rem;
+}
+
+.quantity .box-container .box p{
+  font-size: 2.5rem;
+  color: var(--black);
+  text-align: center;
+  font-weight: bolder;
+  padding-bottom: 3rem;
+}
+
+/* quantity end */
